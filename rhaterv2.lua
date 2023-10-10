@@ -3,7 +3,7 @@
 --Noclip Fling (https://controlc.com/a4570bb2)
 
 local Config = {
-    WindowName = "RHater V2 Control Panel",
+    WindowName = "HydroSploit Hell Panel",
 	Color = Color3.fromRGB(255,0,0),
 	Keybind = Enum.KeyCode.RightControl
 }
@@ -11,22 +11,22 @@ local Config = {
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 
-local Tab1 = Window:CreateTab("Basic Admin")
-local Tab2 = Window:CreateTab("UI Settings")
+local Tab1 = Window:CreateTab("🌐 | Basic Admin")
+local Tab2 = Window:CreateTab("⚙️ | UI Settings")
 
-local Section1 = Tab1:CreateSection("Player")
-local Section2 = Tab1:CreateSection("LoopFling")
-local Section3 = Tab2:CreateSection("Menu")
-local Section4 = Tab2:CreateSection("Background")
-local Section5 = Tab1:CreateSection("Ranking")
-local Section6 = Tab1:CreateSection("Misc")
+local Section1 = Tab1:CreateSection("👶 | Player")
+local Section2 = Tab1:CreateSection("🌀 | LoopFling")
+local Section3 = Tab2:CreateSection("🛠️ |Menu")
+local Section4 = Tab2:CreateSection("🌇 | Background")
+local Section5 = Tab1:CreateSection("🕴️ | Ranking")
+local Section6 = Tab1:CreateSection("💮 | Misc")
 
 plr=nil
 loopflingpicking=false
 local Label1 = Section1:CreateLabel("Label 1")
 Label1:UpdateText("the h")
 -------------
-Section1:CreateTextBox("player name here (full username for rank)", "numbers and letters", false, function(String)
+Section1:CreateTextBox(("Hydro_ex3")", "numbers and letters", false, function(String)
 	plr=String
 end)
 
@@ -54,7 +54,7 @@ Button91:AddToolTip("tps u back to ur old position when u die and respawn")
 local Button2 = Section5:CreateButton("Rank", function()
 local rankedplr = game.Players:FindFirstChild(plr)
 local args = {
-    [1] = "/w " .. rankedplr.Name .. " [RHater V2] You have been ranked, you may look at the commands at github/Alexplayrus1/RHater-V2/blob/main/commands.md",
+    [1] = "/w " .. rankedplr.Name .. " [HydroSploit] You have been ranked, since this is Beta you cannot use commands.",
     [2] = "All"
 }
 
@@ -62,14 +62,14 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 rankedplr.Chatted:Connect(function(msg)
     if msg==".cmds" then
       local args = {
-    [1] = "/w " .. rankedplr.Name .. " [RHater V2] .loopfling - prompts you to enter a players username to loopfling them, kinda kicks, is pretty buggy, more commands at github/Alexplayrus1/RHater-V2/blob/main/commands.md",
+    [1] = "/w " .. rankedplr.Name .. " [HydroSploit] .loopfling - prompts you to enter a players username to loopfling them, kinda kicks, is pretty buggy, more commands at github/Alexplayrus1/RHater-V2/blob/main/commands.md",
     [2] = "All"
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
    elseif msg==".loopfling" then
      local args = {
-    [1] = "/w " .. rankedplr.Name .. " [RHater V2] say a players username to loopfling (can be shortened)",
+    [1] = "/w " .. rankedplr.Name .. " [HydroSploit] say a players username to loopfling (can be shortened)",
     [2] = "All"
 }
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
